@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
-	<meta charset="UTF-8">
-	<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Mostrar ultimo porducto</title>
 </head>
-
 <body>
 
-	<h3>Ultimo Producto</h3><br>
-	<div>
-		<table>
+	<h1>Formulario de Carga de Producto</h1>
+	<li><a href="volver">Volver</a></li>
+	<br>
+	<table>
 			<tr>
 				<th>Cod Producto</th>
 				<th>Nombre</th>
@@ -18,7 +17,7 @@
 				<th>Marca</th>
 				<th>Stock</th>
 			</tr>
-			<tr th:each="producto : ${i}">
+			<tr th:each="producto : ${ultimoProducto}">
 				<td th:text="${producto.codProducto}"></td>
 				<td th:text="${producto.nombre}"></td>
 				<td th:text="${producto.precio}"></td>
@@ -26,7 +25,4 @@
 				<td th:text="${producto.stock}"></td>
 			</tr>
 		</table>
-	</div>
 </body>
-
-</html>
