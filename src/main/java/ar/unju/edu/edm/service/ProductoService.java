@@ -8,7 +8,6 @@ import ar.unju.edu.edm.model.Producto;
 
 @Service
 public interface ProductoService {
-	//qué hace con Producto
 	
 	public void guardarProducto(Producto unProducto);
 	public void modificarProducto(Producto productoAModificar);
